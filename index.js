@@ -9,7 +9,7 @@ app.use(cors())
 app.use(express.json())
 
 
-app.get("/" , async(req,res) => {
+app.get("/api/v1/dikr" , async(req,res) => {
     const dikr = await Dikr.find({})
     res.status(200).json({dikr})
 })
